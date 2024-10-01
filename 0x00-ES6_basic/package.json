@@ -5,7 +5,7 @@
   "main": ".eslintrc.js",
   "scripts": {
     "dev": "babel-node",
-    "test": "Jest"
+    "test": "jest"
   },
   "devDependencies": {
     "@babel/cli": "^7.25.6",
