@@ -1,6 +1,3 @@
-export default function getResponseFromAPI(){
-	let newPromise =  new Promise((resolve) => {
-		resolve(213345);
-	});
-	return newPromise;
+export default function getResponseFromAPI() {
+  return new Promise(() => {});
 }
