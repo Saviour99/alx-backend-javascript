@@ -1,15 +1,13 @@
 import signUpUser from './4-user-promise';
 import uploadPhoto from './5-photo-reject';
 
-export default function handleProfileSignup(firstName, lastName, fileName) {
-    return Promise.allSettled([
-        signUpUser(firstName, lastName),
-        uploadPhoto(fileName),
-    ]).then((rlts) => 
-        rlts.map((rlt) => ({
-            status: rlt.status,
-            value: rlt.status === 'fulfilled' ? rlt.value : String(rlt.reason),
-        }))
-    );
+export default async function handleProfileSignup(firstName, lastName, fileName) {
+  return Promise
+    .allSettled([signUpUser(firstName, lastName), uploadPhoto(fileName)])
+    .then((rlt) => (
+      rlt.map((outp) => ({
+        status: outp.status,
+        value: outp.status === 'fulfilled' ? outp.value : String(outp.reason),
+      }))
+    ));
 }
-
