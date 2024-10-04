@@ -1,4 +1,4 @@
-import ClassRoom from './0-classroom.js';
+import ClassRoom from './0-classroom';
 
 /**
  * Creates an array of {@link ClassRoom}s with a specific size.
@@ -7,5 +7,5 @@ import ClassRoom from './0-classroom.js';
 
 export default function initializeRooms() {
   const arraySizes = [19, 20, 34];
-  return arraySizes.map(size => new ClassRoom(size));
+  return arraySizes.map((size) => new ClassRoom(size));
 }
