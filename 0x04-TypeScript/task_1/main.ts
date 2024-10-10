@@ -1,10 +1,10 @@
 interface Teacher {
-    readonly firstName: string;
-    readonly lastName; string;
-    fullTimeEmployee: boolean;
-    yearsOfExperience?: number;
-    location: string;
-    [attribute: string]: any;
+    readonly firstName: string;  // Can only be set during initialization
+    readonly lastName: string;   // Can only be set during initialization
+    fullTimeEmployee: boolean;   // Must always be defined
+    yearsOfExperience?: number;  // Optional attribute
+    location: string;            // Must always be defined
+    [key: string]: any;          // Allows adding any additional attributes dynamically
 }
 
 const teacher3: Teacher = {
