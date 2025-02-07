@@ -30,3 +30,7 @@ describe('calculateNumber', () => {
     assert.strictEqual(calculateNumber(2.6, 2.0), 5);
   });
 
+  it('rounding down a and b floating point fractional numbers with trailing 9\'s', () => {
+    assert.strictEqual(calculateNumber(2.499999, 3.499999), 5);
+  });
+});
